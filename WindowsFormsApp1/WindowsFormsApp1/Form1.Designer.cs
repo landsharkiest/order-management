@@ -31,6 +31,17 @@
         private System.Windows.Forms.Button btnMoveToActive;
         private System.Windows.Forms.Button btnComplete;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.TextBox txtOrderValue;
+        private System.Windows.Forms.DateTimePicker dtpDueDate;
+        private System.Windows.Forms.Label lblOrderValue;
+        private System.Windows.Forms.Label lblDueDate;
+        private System.Windows.Forms.ColumnHeader columnHeaderValue1;
+        private System.Windows.Forms.ColumnHeader columnHeaderValue2;
+        private System.Windows.Forms.ColumnHeader columnHeaderValue3;
+        private System.Windows.Forms.ColumnHeader columnHeaderDueDate1;
+        private System.Windows.Forms.ColumnHeader columnHeaderDueDate2;
+        private System.Windows.Forms.ColumnHeader columnHeaderDueDate3;
+
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
@@ -78,6 +89,16 @@
             this.btnMoveToActive = new System.Windows.Forms.Button();
             this.btnComplete = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.txtOrderValue = new System.Windows.Forms.TextBox();
+            this.dtpDueDate = new System.Windows.Forms.DateTimePicker();
+            this.lblOrderValue = new System.Windows.Forms.Label();
+            this.lblDueDate = new System.Windows.Forms.Label();
+            this.columnHeaderValue1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderValue2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderValue3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderDueDate1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderDueDate2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderDueDate3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // tabControlMain
@@ -139,6 +160,8 @@
             this.columnHeaderId1,
             this.columnHeaderCustomer1,
             this.columnHeaderItem1,
+            this.columnHeaderValue1,
+            this.columnHeaderDueDate1,
             this.columnHeaderDate1});
             this.listViewNew.FullRowSelect = true;
             this.listViewNew.HideSelection = false;
@@ -159,6 +182,8 @@
             this.columnHeaderId2,
             this.columnHeaderCustomer2,
             this.columnHeaderItem2,
+            this.columnHeaderValue2,
+            this.columnHeaderDueDate2,
             this.columnHeaderDate2});
             this.listViewActive.FullRowSelect = true;
             this.listViewActive.HideSelection = false;
@@ -179,6 +204,8 @@
             this.columnHeaderId3,
             this.columnHeaderCustomer3,
             this.columnHeaderItem3,
+            this.columnHeaderValue3,
+            this.columnHeaderDueDate3,
             this.columnHeaderDate3});
             this.listViewCompleted.FullRowSelect = true;
             this.listViewCompleted.HideSelection = false;
@@ -208,7 +235,17 @@
             // columnHeaderDate1
             // 
             this.columnHeaderDate1.Text = "Date";
-            this.columnHeaderDate1.Width = 150;
+            this.columnHeaderDate1.Width = 100;
+            // 
+            // columnHeaderValue1
+            // 
+            this.columnHeaderValue1.Text = "Order Value";
+            this.columnHeaderValue1.Width = 100;
+            // 
+            // columnHeaderDueDate1
+            // 
+            this.columnHeaderDueDate1.Text = "Due Date";
+            this.columnHeaderDueDate1.Width = 100;
             // 
             // columnHeaderId2
             // 
@@ -228,7 +265,17 @@
             // columnHeaderDate2
             // 
             this.columnHeaderDate2.Text = "Date";
-            this.columnHeaderDate2.Width = 150;
+            this.columnHeaderDate2.Width = 100;
+            // 
+            // columnHeaderValue2
+            // 
+            this.columnHeaderValue2.Text = "Order Value";
+            this.columnHeaderValue2.Width = 100;
+            // 
+            // columnHeaderDueDate2
+            // 
+            this.columnHeaderDueDate2.Text = "Due Date";
+            this.columnHeaderDueDate2.Width = 100;
             // 
             // columnHeaderId3
             // 
@@ -248,7 +295,17 @@
             // columnHeaderDate3
             // 
             this.columnHeaderDate3.Text = "Date";
-            this.columnHeaderDate3.Width = 150;
+            this.columnHeaderDate3.Width = 100;
+            // 
+            // columnHeaderValue3
+            // 
+            this.columnHeaderValue3.Text = "Order Value";
+            this.columnHeaderValue3.Width = 100;
+            // 
+            // columnHeaderDueDate3
+            // 
+            this.columnHeaderDueDate3.Text = "Due Date";
+            this.columnHeaderDueDate3.Width = 100;
             // 
             // panelNew
             // 
@@ -256,8 +313,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelNew.Controls.Add(this.txtItem);
             this.panelNew.Controls.Add(this.txtCustomer);
+            this.panelNew.Controls.Add(this.txtOrderValue);
+            this.panelNew.Controls.Add(this.dtpDueDate);
             this.panelNew.Controls.Add(this.lblItem);
             this.panelNew.Controls.Add(this.lblCustomer);
+            this.panelNew.Controls.Add(this.lblOrderValue);
+            this.panelNew.Controls.Add(this.lblDueDate);
             this.panelNew.Controls.Add(this.btnAddNew);
             this.panelNew.Controls.Add(this.btnMoveToActive);
             this.panelNew.Location = new System.Drawing.Point(6, 312);
@@ -269,15 +330,29 @@
             // 
             this.txtItem.Location = new System.Drawing.Point(320, 10);
             this.txtItem.Name = "txtItem";
-            this.txtItem.Size = new System.Drawing.Size(200, 20);
+            this.txtItem.Size = new System.Drawing.Size(150, 20);
             this.txtItem.TabIndex = 3;
             // 
             // txtCustomer
             // 
             this.txtCustomer.Location = new System.Drawing.Point(80, 10);
             this.txtCustomer.Name = "txtCustomer";
-            this.txtCustomer.Size = new System.Drawing.Size(200, 20);
+            this.txtCustomer.Size = new System.Drawing.Size(150, 20);
             this.txtCustomer.TabIndex = 2;
+            // 
+            // txtOrderValue
+            // 
+            this.txtOrderValue.Location = new System.Drawing.Point(80, 40);
+            this.txtOrderValue.Name = "txtOrderValue";
+            this.txtOrderValue.Size = new System.Drawing.Size(150, 20);
+            this.txtOrderValue.TabIndex = 4;
+            // 
+            // dtpDueDate
+            // 
+            this.dtpDueDate.Location = new System.Drawing.Point(320, 40);
+            this.dtpDueDate.Name = "dtpDueDate";
+            this.dtpDueDate.Size = new System.Drawing.Size(150, 20);
+            this.dtpDueDate.TabIndex = 5;
             // 
             // lblItem
             // 
@@ -297,12 +372,30 @@
             this.lblCustomer.TabIndex = 3;
             this.lblCustomer.Text = "Customer";
             // 
+            // lblOrderValue
+            // 
+            this.lblOrderValue.AutoSize = true;
+            this.lblOrderValue.Location = new System.Drawing.Point(10, 43);
+            this.lblOrderValue.Name = "lblOrderValue";
+            this.lblOrderValue.Size = new System.Drawing.Size(64, 13);
+            this.lblOrderValue.TabIndex = 5;
+            this.lblOrderValue.Text = "Order Value";
+            // 
+            // lblDueDate
+            // 
+            this.lblDueDate.AutoSize = true;
+            this.lblDueDate.Location = new System.Drawing.Point(250, 43);
+            this.lblDueDate.Name = "lblDueDate";
+            this.lblDueDate.Size = new System.Drawing.Size(56, 13);
+            this.lblDueDate.TabIndex = 6;
+            this.lblDueDate.Text = "Due Date";
+            // 
             // btnAddNew
             // 
             this.btnAddNew.Location = new System.Drawing.Point(540, 8);
             this.btnAddNew.Name = "btnAddNew";
             this.btnAddNew.Size = new System.Drawing.Size(100, 23);
-            this.btnAddNew.TabIndex = 4;
+            this.btnAddNew.TabIndex = 6;
             this.btnAddNew.Text = "Add Order";
             this.btnAddNew.UseVisualStyleBackColor = true;
             this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
@@ -312,7 +405,7 @@
             this.btnMoveToActive.Location = new System.Drawing.Point(540, 40);
             this.btnMoveToActive.Name = "btnMoveToActive";
             this.btnMoveToActive.Size = new System.Drawing.Size(100, 23);
-            this.btnMoveToActive.TabIndex = 5;
+            this.btnMoveToActive.TabIndex = 7;
             this.btnMoveToActive.Text = "Move to Active";
             this.btnMoveToActive.UseVisualStyleBackColor = true;
             this.btnMoveToActive.Click += new System.EventHandler(this.btnMoveToActive_Click);
