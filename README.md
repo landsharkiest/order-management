@@ -6,3 +6,7 @@ What it does
 - Create a New Order by inputting Customer name or Order name, and then what the order is
 - You can then move orders into Active and Completed sections when it is necessary
 - Orders are organized by date created
+- You can set a deadline so orders can also be sorted by a deadline
+- Also added an Order Value column, so orders can be sorted by Order Value in $
+
+![Project Screenshot](assets/orderdashboardmain.png)
